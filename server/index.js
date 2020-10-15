@@ -6,14 +6,14 @@ const port = 3000;
 const ip = "localhost";
 app.use(morgan('dev'));
 
-app.get('/productinfo', (req, res) => {
+app.get('/product', (req, res) => {
     res.send('This is a proxy service which proxies to Product Information Services API');
  });
 
 const API_SERVICE_URL = "https://jsonplaceholder.typicode.com";
 
 
-app.use('/json_placeholder', createProxyMiddleware({
+app.use('/', createProxyMiddleware({
     target: API_SERVICE_URL,
     changeOrigin: true,
     pathRewrite: {
