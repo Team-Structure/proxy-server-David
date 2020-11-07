@@ -4,7 +4,7 @@
   "description": "Proxy-Server for Google Shopping",
   "main": "index.js",
   "scripts": {
-    "start-production": "node server/index.js",
+    "start-production": "node -r dotenv/config server/index.js",
     "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Team-Structure/proxy-server-David#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.6",
     "morgan": "^1.10.0"

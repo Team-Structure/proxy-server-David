@@ -4,7 +4,7 @@ const path = require("path");
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const port = 3000;
-const ip = "localhost";
+const ip = process.env.IP || "localhost";
 app.use(morgan('dev'));
 
  app.use('/', express.static(path.join(__dirname, './../client/dist')))
