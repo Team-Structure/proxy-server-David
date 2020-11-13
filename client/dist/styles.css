@@ -9,13 +9,11 @@
     display:flex;
 }
 #container {
- display: flex;
- flex-direction: row;
- flex-wrap: nowrap;
-justify-content: left;
- margin-left: 38px;
- align-items: stretch;
- vertical-align: middle;
+    display: flex;
+    width: 20%;
+}
+#SpecContainer {
+    margin: 50px 0px 50px 0px;
 }
 
 #middle {
