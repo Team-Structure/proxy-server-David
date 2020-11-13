@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const port = 3000;
 const ip = process.env.IP || 'localhost';
-app.use(morgan('dev'));
+
 
  app.use('/', express.static(path.join(__dirname, './../client/dist')))
  app.use('/products/:product_id', express.static(path.join(__dirname, './../client/dist/index.html')));
@@ -13,6 +13,9 @@ app.use(morgan('dev'));
    res.sendFile(path.join(__dirname, './../client/dist/index.html'));
  });
  
+ app.use('/test', (req, res) => {
+   res.send('hello');
+ });
 
  app.listen(port, () => {
     console.log(`Starting Proxy at ${port}`);
