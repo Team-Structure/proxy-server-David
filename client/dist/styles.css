@@ -5,13 +5,29 @@
 }
 #description {
     flex:column;
-    max-width: 100px;
-    display:flex;
+    max-width: 500px;
+    display:inline-flex;
 }
-#container {
-    display: flex;
+#image-container {
+    width: 20%;
+    justify-content: left;
+}
+
+#description-container {
+    justify-content: center;
     width: 20%;
 }
+
+#price-container {
+    width: 20%;
+    justify-content: right;
+}
+
+#supercontainer {
+    display: inline !important;
+    
+}
+
 #SpecContainer {
     margin: 50px 0px 50px 0px;
 }

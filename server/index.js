@@ -18,5 +18,4 @@ const ip = process.env.IP || 'localhost';
 
  app.listen(port, ip, () => {
   console.log(`Starting Proxy at ${ip}:${port}`);
-  console.log('hello');
 });
