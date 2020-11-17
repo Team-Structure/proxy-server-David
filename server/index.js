@@ -6,15 +6,12 @@ const app = express();
 const port = 3000;
 const ip = process.env.IP || 'localhost';
 
-app.use('/', (req, res) => {
-  res.send('please work')
-})
 
-//  app.use('/', express.static(path.join(__dirname, './../client/dist')))
-//  app.use('/products/:product_id', express.static(path.join(__dirname, './../client/dist/index.html')));
-//  app.get('*', (req, res) => {
-//    res.sendFile(path.join(__dirname, './../client/dist/index.html'));
-//  });
+ app.use('/', express.static(path.join(__dirname, './../client/dist')))
+ app.use('/products/:product_id', express.static(path.join(__dirname, './../client/dist/index.html')));
+ app.get('*', (req, res) => {
+   res.sendFile(path.join(__dirname, './../client/dist/index.html'));
+ });
  
 
 
